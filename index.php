@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $subject = 'New message from the Post-Click Growth site — ' . $formData['name'];
         $body    = "You've received a new contact form submission from your Post-Click Growth website.\n\n"
                  . "Name: {$formData['name']}\nEmail: {$formData['email']}\nCompany: {$formData['company']}\n\nMessage:\n{$formData['message']}";
-        $headers = "From: no-reply@postclickgrowth.com\r\nReply-To: {$formData['email']}";
+        $headers = "From: reed@reediredale.com\r\nReply-To: {$formData['email']}";
 
         // mail() depends on server MTA config; treat the request as received either way.
         @mail($to, $subject, $body, $headers);
