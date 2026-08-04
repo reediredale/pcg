@@ -61,7 +61,6 @@ $brandName = 'Post-Click Growth';
 <header class="site-header" id="site-header">
   <div class="container header-inner">
     <span class="brand">
-      <span class="brand-mark" aria-hidden="true"></span>
       <span class="brand-name"><?= htmlspecialchars($brandName) ?></span>
     </span>
     <button type="button" class="btn btn-primary btn-small open-modal-btn">Apply Now</button>
@@ -146,7 +145,7 @@ $brandName = 'Post-Click Growth';
   </section>
 
   <section class="section section-alt reveal" id="approach">
-    <div class="container">
+    <div class="container container-narrow">
       <p class="eyebrow center">How we actually work</p>
       <h2 class="section-title center">A repeatable process, not a grab-bag of tactics</h2>
 
@@ -285,7 +284,6 @@ $brandName = 'Post-Click Growth';
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <span class="brand-mark" aria-hidden="true"></span>
     <span class="brand-name"><?= htmlspecialchars($brandName) ?></span>
   </div>
 </footer>
