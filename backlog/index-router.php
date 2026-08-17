@@ -8,22 +8,21 @@ if ($path === '') {
     $path = '/';
 }
 
-// The multi-page version (The System / Results) is on the backlog for now —
-// send any old links back to the homepage rather than 404ing them.
+// Safety net for old-style .php links / bookmarks - send them to the clean URL permanently.
 $legacyRedirects = [
     '/index.php'      => '/',
-    '/the-system.php' => '/',
-    '/the-system'     => '/',
-    '/results.php'    => '/',
-    '/results'        => '/',
+    '/the-system.php' => '/the-system',
+    '/results.php'    => '/results',
 ];
-if (isset($legacyRedirects[$path]) && $legacyRedirects[$path] !== $path) {
+if (isset($legacyRedirects[$path])) {
     header('Location: ' . $legacyRedirects[$path], true, 301);
     exit;
 }
 
 $routes = [
-    '/' => __DIR__ . '/partials/pages/home.php',
+    '/'            => __DIR__ . '/partials/pages/home.php',
+    '/the-system'  => __DIR__ . '/partials/pages/the-system.php',
+    '/results'     => __DIR__ . '/partials/pages/results.php',
 ];
 
 $pageFile = $routes[$path] ?? null;

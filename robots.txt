@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /partials/
+Disallow: /backlog/
+Disallow: /vendor/
+Disallow: /mail-config.php
+Disallow: /mail-config.example.php
+
+Sitemap: https://postclickgrowth.com/sitemap.xml

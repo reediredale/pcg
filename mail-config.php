@@ -1,5 +1,5 @@
 <?php
-// Local secret config — gitignored, never committed.
+// Local secret config - gitignored, never committed.
 // Fill in the two values below, then save.
 
 return [

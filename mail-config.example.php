@@ -1,6 +1,6 @@
 <?php
 // Copy this file to mail-config.php (already gitignored) and fill in
-// your real values. Never commit mail-config.php — it holds a secret.
+// your real values. Never commit mail-config.php - it holds a secret.
 
 return [
     // The Gmail / Google Workspace address that sends the notification.

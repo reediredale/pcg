@@ -7,6 +7,24 @@
   var closeBtn = document.getElementById("modal-close-btn");
   var overlay = document.getElementById("modal-overlay");
   var form = document.getElementById("contact-form");
+  var navToggle = document.getElementById("nav-toggle");
+  var mainNav = document.getElementById("main-nav");
+
+  if (navToggle && mainNav) {
+    navToggle.addEventListener("click", function () {
+      var isOpen = mainNav.classList.toggle("is-open");
+      navToggle.classList.toggle("is-open", isOpen);
+      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+
+    mainNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("is-open");
+        navToggle.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
 
   function onScroll() {
     header.classList.toggle("is-scrolled", window.scrollY > 12);
@@ -151,8 +169,8 @@
           tooltip: {
             backgroundColor: "#1e1b4b",
             padding: 10,
-            titleFont: { family: "Plus Jakarta Sans" },
-            bodyFont: { family: "Plus Jakarta Sans" },
+            titleFont: { family: "Neue Montreal" },
+            bodyFont: { family: "Neue Montreal" },
             callbacks: {
               label: function (item) {
                 return item.dataset.label + ": " + item.parsed.y.toFixed(1);
@@ -163,11 +181,11 @@
         scales: {
           x: {
             grid: { display: false },
-            ticks: { font: { family: "Plus Jakarta Sans", size: 10 }, color: "#5c5a72", maxRotation: 0, autoSkip: true, maxTicksLimit: 6 }
+            ticks: { font: { family: "Neue Montreal", size: 10 }, color: "#5c5a72", maxRotation: 0, autoSkip: true, maxTicksLimit: 6 }
           },
           y: {
             grid: { color: "#e6e2f0" },
-            ticks: { font: { family: "Plus Jakarta Sans", size: 10 }, color: "#5c5a72" }
+            ticks: { font: { family: "Neue Montreal", size: 10 }, color: "#5c5a72" }
           }
         }
       }
